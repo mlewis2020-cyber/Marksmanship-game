@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Week_2_opensourceproject_michaelrlewis_styles.css" />
+        <title>Aim Training | Project 5</title>
+    </head>
+    <body>
+        <div class="screen" id="start-screen">
+            <h1>Aim Training</h1>
+            <a href="#" class="start" id="start">Start the Game</a>
+            <a href="#" class="start" id="view-scores">View High Scores</a>
+        </div>
+
+        <div class="screen" id="time-screen">
+            <h1>Select the Length of Time</h1>
+            <ul class="time-list" id="time-list">
+                <li>
+                    <button class="time-btn" data-time="10">10 Seconds</button>
+                </li>
+                <li>
+                    <button class="time-btn" data-time="20">20 Seconds</button>
+                </li>
+                <li>
+                    <button class="time-btn" data-time="30">30 Seconds</button>
+                </li>
+                <li>
+                    <button class="time-btn" data-time="40">40 Seconds</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="screen" id="game-screen">
+            <div class="game-header">
+                <h3>Time Remaining <span id="time">00:00</span></h3>
+                <button id="restart" class="time-btn" type="button">Restart</button>
+            </div>
+            <div class="board" id="board"></div>
+        </div>
+
+        <!-- High Scores screen -->
+        <div class="screen" id="scores-screen">
+            <h1>Top 10 High Scores</h1>
+            <ol id="highscore-list" class="highscore-list"></ol>
+            <div class="scores-actions">
+                <button id="clear-scores" class="time-btn" type="button">Clear High Scores</button>
+                <button id="back-to-start" class="time-btn" type="button">Back</button>
+            </div>
+        </div>
+
+        <!-- Name entry modal (appears when a game finishes and score > 0) -->
+        <div id="name-modal" class="modal hidden" aria-hidden="true">
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <h2 id="modal-title">Save Your Score</h2>
+                <p class="modal-sub">Your score: <span id="modal-score" class="primary">0</span></p>
+                <label for="player-name" class="visually-hidden">Player name</label>
+                <input id="player-name" type="text" maxlength="20" placeholder="Enter your name (max 20 chars)" />
+                <div class="modal-buttons">
+                    <button id="save-name" class="time-btn">Save</button>
+                    <button id="skip-save" class="time-btn">Skip</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="Week_2_opensourceproject_michaelrlewis_app_ver3.js"></script>
+    </body>
+</html>
